@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <input type="number" name="first" [(ngModel)]="first" />
+      <p>+</p>
+      <input type="number" name="second" [(ngModel)]="second" />
+      <button
+        type="button"
+        (click)="soma()"
+        class="btn btn-outline-success btn-sm"
+      >
+        SOMAR
+      </button>
+      <button
+        type="button"
+        (click)="limpar()"
+        class="btn btn-outline-danger btn-sm"
+      >
+        LIMPAR
+      </button>
+      <p>=</p>
+      <input
+        type="text"
+        [ngModel]="total"
+        (ngModelChange)="total = $event.target"
+        disabled="disabled"
+      />
+    </div>
+  </div>
+</div>
